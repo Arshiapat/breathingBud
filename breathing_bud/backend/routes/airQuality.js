@@ -10,7 +10,7 @@ router.get('/:lat/:lon', async (req, res) => {
     const { lat, lon } = req.params;
     try {
         // Makes HTTP GET request to OpenAQ API for air quality data
-        const response = await axios.get(`https://api.openaq.org/v2/latest?coordinates=${lat},${lon}`);
+        const response = await axios.get(`https://api.openaq.org/v3/latest?coordinates=${lat},${lon}`);
         // Sends API response back to frontend
         res.json(response.data); 
     
