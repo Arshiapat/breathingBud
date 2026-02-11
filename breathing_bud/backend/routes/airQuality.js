@@ -1,4 +1,5 @@
 // API for fetching air quality
+const axios = require('axios');
 const express = require('express');
 const router = express.Router();
 const pool = require('../db');
