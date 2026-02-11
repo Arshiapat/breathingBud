@@ -35,10 +35,14 @@ app.get('/api/health', (req, res) => {
   res.json({ message: 'Backend is running!' });
 });
 
-// Route for inhaler usage
+// Route for inhaler usage and air quality data
 // Creates POST endpoint, which means frontend is sending data to server
 const inhalerRoutes = require('./routes/inhaler');
 app.use('/api/inhaler', inhalerRoutes);
+
+const airRoutes = require('./routes/airQuality');
+app.use('/api/air-quality', airRoutes);
+
 
 app.post('/api/items', async (req, res) => {
   const { name } = req.body;
