@@ -25,3 +25,5 @@ router.post('/', async (req, res) => {
   }
   
 });
+// Exports router so that it can be used in server.js
+module.exports = router;
