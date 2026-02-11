@@ -1,7 +1,7 @@
 // API for inhaler usage
 const express = require('express');
 const router = express.Router();
-const pool = require('../db'); // we’ll make db.js next
+const pool = require('../db'); 
 
 // Route for inhaler usage
 // Creates POST endpoint, which means frontend is sending data to server
